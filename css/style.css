@@ -210,12 +210,14 @@ h6,
 
 .service-item img,
 .service-item .bg-light,
-.service-item .bg-light h5,
+
 .team-item .team-text {
     box-shadow: 0 0 15px rgba(0, 0, 0, .7);
     transition: .5s;
-  
+    color:#0d6efd;
+ 
 }
+
 
 .service-item:hover img {
     transform: scale(1.15);
