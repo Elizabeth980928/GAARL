@@ -41,7 +41,7 @@ h6,
 }
 
 .btn-primary:hover {
-    background:#fcf204;
+    background:#F57E57;
     border-color: var(--secondary);
 }
 
@@ -236,6 +236,7 @@ h6,
     opacity: 0;
     transition: .5s;
     z-index: -1;
+ 
 }
 
 .team-item:hover .team-text::after,
