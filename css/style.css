@@ -31,8 +31,6 @@ h6,
     font-family: 'Jost', sans-serif;
     font-weight: 600;
     transition: .5s;
-    border-radius: 50px;
-    width:180px;
 }
 
 .btn-primary,
@@ -41,7 +39,7 @@ h6,
 }
 
 .btn-primary:hover {
-    background:#F57E57;
+    background: var(--secondary);
     border-color: var(--secondary);
 }
 
@@ -109,7 +107,7 @@ h6,
     font-family: 'Jost', sans-serif;
     padding: 35px 15px;
     font-size: 18px;
-    color: #0d6efd;
+    color: #fff;
     outline: none;
     transition: .5s;
 }
@@ -120,7 +118,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color:  rgba(9, 30, 62, .85);
+    color: #fcf204;
 }
 
 @media (max-width: 991.98px) {
@@ -141,7 +139,7 @@ h6,
 
 @media (max-width: 576px) {
     .carousel-caption h5 {
-        font-size: 10px;
+        font-size: 14px;
         font-weight: 500 !important;
     }
 
@@ -210,14 +208,10 @@ h6,
 
 .service-item img,
 .service-item .bg-light,
-
+.service-item .bg-light h5,
 .team-item .team-text {
-    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
     transition: .5s;
-    color:#0d6efd;
- 
 }
-
 
 .service-item:hover img {
     transform: scale(1.15);
@@ -236,7 +230,6 @@ h6,
     opacity: 0;
     transition: .5s;
     z-index: -1;
- 
 }
 
 .team-item:hover .team-text::after,
@@ -334,54 +327,275 @@ h6,
     height: 120px;
 }
 
-.weatherwidget  {
-    font-style: normal;
-    width: 700px;
-  
-  }
 
-  
+/* TENDERS*/
 
-/*--------------------------------------------------------------
-# Clients Section
+.bg-tender {
+    background-color: rgba(128, 0, 0, 0.6); /* 0.5 represents 50% transparency */
+    color: white;
+    padding: 15px;
+}
+.nav-tabs .nav-link {
+    font-size: 1.1rem; /* Increase font size for nav items */
+    background-color: #616161;
+    color: #77ccff;
+    border: 1px solid #ddd;
+    text-align: center; /* Center text */
+}
+.nav-tabs .nav-link.active {
+    
+    color: #A52A2A;
+    width: 250px; /* Increase width of nav links */
+    text-align: center; /* Center text */
+    
+}
+.table thead th {
+    background-color: #616161;
+    color: white;
+    font-size: 1.1rem;
+    height: 60px; /* Adjust the height as needed */
+}
+
+.table {
+    background-color: #ffffff; /* White background for the whole table */
+}
+
+.table tbody tr td {
+    background-color: #ffffff !important; /* White background for table cells */
+    border-left: 1px solid #ddd; /* Left border for table cells */
+    border-right: 1px solid #ddd; /* Right border for table cells */
+}
+/* Custom styles for the table rows */
+.table tbody tr {
+    height: 60px; /* Adjust the height as needed */
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button a {
+    color: #1c0963 !important; /* Maroon color for pagination buttons */
+}
+.dataTables_wrapper .dataTables_info, 
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    color: #1c0963!important; /* Maroon color for info text, length menu, and search input */
+}
+
+th.description-col {
+    min-width: 500px; /* Adjust the width as needed */
+}
+@media (max-width: 768px) {
+    .nav-tabs .nav-link {
+        font-size: 1rem; /* Smaller font size for nav items on small screens */
+        width: auto; /* Adjust width for small screens */
+    }
+    th.description-col {
+        min-width: auto; /* Adjust the width for small screens */
+    }
+}
+
+/* Remove color and underline from links in table */
+.table a {
+    color: inherit; /* Inherit color from parent element */
+    text-decoration: none; /* Remove underline */
+}
+.table a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/*news*/
+.publications {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px; 
+}
+
+.publications h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.newsletter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.newsletter-item {
+    display: inline-block; /* Ensure items are displayed in a line */
+  
+    margin-right: 10px; /* Adjust margin between items as needed */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px; /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-item img {
+    width: 100%;
+    height: 160px; /* Adjusted height */
+    object-fit: cover;
+}
+
+.newsletter-content {
+    padding: 5px; 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.newsletter-content h2 {
+    font-size: 1em; /* Adjusted font size */
+    margin: 0 0 5px 0;
+}
+
+.newsletter-content p {
+    font-size: 0.8em; /* Adjusted font size */
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.newsletter-content .date {
+    font-size: 0.7em; /* Adjusted font size */
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.newsletter-content .icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+}
+
+.newsletter-content .icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+.view-more-container {
+        text-align: center; /* Center align the button */
+        margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .view-more-btn {
+        padding: 10px 20px; /* Padding for button */
+        font-size: 16px; /* Font size */
+        background-color: #007bff; /* Button background color */
+        color: #fff; /* Button text color */
+        border: none; /* Remove border */
+        cursor: pointer; /* Pointer cursor on hover */
+        border-radius: 4px; /* Rounded corners */
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Ensure it behaves like a block element */
+    }
+
+    .view-more-btn:hover {
+        background-color: #0056b3; /* Darker background color on hover */
+    }
+
+
+    /*--------------------------------------------------------------
+# Portfolio Section
 --------------------------------------------------------------*/
-.clients {
-    background-color: rgb(255, 255, 249,);
-    height: 250px;
-    
+.portfolio .portfolio-filters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
   }
   
-  .clients .swiper-slide img {
-  
-    transition: 0.3s;
-    opacity: 1;
-    margin-top: -25px;
-    
+  .portfolio .portfolio-filters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 20px 10px 20px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 5px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    font-family: var(--heading-font);
   }
   
-  .clients .swiper-slide img:hover {
-    filter: none;
-    opacity: 0.5;
-  }
-  
-  .clients .swiper-wrapper {
-    height: auto;
-  }
-  
-  .clients .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-  }
-  
-  .clients .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    background-color: #3c9a41;
-  }
-  
-  .clients .swiper-pagination .swiper-pagination-bullet-active {
+  .portfolio .portfolio-filters li:hover,
+  .portfolio .portfolio-filters li.filter-active {
+    color: var(--contrast-color);
     background-color: var(--accent-color);
   }
   
+  .portfolio .portfolio-filters li:first-child {
+    margin-left: 0;
+  }
+  
+  .portfolio .portfolio-filters li:last-child {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 575px) {
+    .portfolio .portfolio-filters li {
+      font-size: 14px;
+      margin: 0 0 10px 0;
+    }
+  }
+  
+  .portfolio .portfolio-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -100%;
+    z-index: 3;
+    transition: all ease-in-out 0.5s;
+    background: color-mix(in srgb, var(--background-color), transparent 10%);
+    padding: 15px;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 50px;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-right: 50px;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .preview-link,
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    right: 50px;
+    font-size: 24px;
+    top: calc(50% - 14px);
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    transition: 0.3s;
+    line-height: 0;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .preview-link:hover,
+  .portfolio .portfolio-item .portfolio-info .details-link:hover {
+    color: var(--accent-color);
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 14px;
+    font-size: 28px;
+  }
+  
+  .portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    bottom: 0;
+  }
   
